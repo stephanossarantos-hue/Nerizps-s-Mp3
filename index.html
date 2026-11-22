@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090b10"><title>Nerizps Audio — Convert to MP3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="glow glow-a"></div><div class="glow glow-b"></div>
+<header class="nav wrap">
+  <a class="brand" href="/"><span class="logo">N</span><span>Nerizps <b>Audio</b></span></a>
+  <div class="nav-right"><span class="secure"><i></i> Private processing</span><a class="github" href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><span>✳</span> YOUR AUDIO WORKSPACE</div>
+    <h1>Sound good.<br><em>Save as MP3.</em></h1>
+    <p class="intro">A clean, simple way to convert audio files and direct audio links into MP3. Drop it in, choose your quality, and download.</p>
+  </section>
+
+  <section class="workspace">
+    <div class="card">
+      <div class="card-top"><div><div class="card-eyebrow">CONVERTER</div><h2>Start converting</h2></div><div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+      <div class="source-tabs" role="tablist" aria-label="Audio source">
+        <button class="source-tab active" data-tab="file" role="tab" aria-selected="true">↥ <span>Upload file</span></button>
+        <button class="source-tab" data-tab="url" role="tab" aria-selected="false">↗ <span>Audio URL</span></button>
+      </div>
+      <div id="filePane" class="pane">
+        <label id="dropArea" class="drop-area" for="audioFile">
+          <input id="audioFile" type="file" accept="audio/*,.wav,.mp3,.m4a,.aac,.ogg,.flac,.webm">
+          <span class="upload-symbol">↑</span><strong>Drop your audio file here</strong>
+          <span class="browse">or <u>browse files</u></span><small>MP3 · WAV · M4A · AAC · OGG · FLAC</small>
+        </label>
+      </div>
+      <div id="urlPane" class="pane hidden">
+        <label class="input-label" for="audioUrl">Direct link to an audio file</label>
+        <div class="url-input-row"><input id="audioUrl" type="url" placeholder="https://example.com/track.wav" autocomplete="url"><button id="loadUrl" class="load-btn">Use link <span>→</span></button></div>
+        <p class="microcopy">Paste a direct link to an audio file from a source that allows downloading. Regular YouTube watch links are not direct audio URLs.</p>
+      </div>
+      <div id="selected" class="selected hidden"><div class="file-symbol">♫</div><div class="file-details"><b id="fileName">audio.wav</b><span id="fileSize">Ready to convert</span></div><button id="clearFile" class="clear" aria-label="Remove audio">×</button></div>
+      <div class="options">
+        <div class="option-copy"><label for="bitrate">MP3 quality</label><span>Choose your preferred sound quality</span></div>
+        <div class="select-wrap"><select id="bitrate"><option value="320">320 kbps · Best</option><option value="256">256 kbps · High</option><option value="192" selected>192 kbps · Balanced</option><option value="128">128 kbps · Compact</option></select><span>⌄</span></div>
+      </div>
+      <button id="convert" class="convert" disabled><span class="convert-label">Convert to MP3</span><span class="arrow">↗</span></button>
+      <div id="progressWrap" class="progress-wrap hidden"><div class="progress-head"><span id="progressText">Preparing audio…</span><b id="progressPct">0%</b></div><div class="track"><span id="progressBar"></span></div></div>
+      <div id="message" class="message" aria-live="polite">Your audio is processed by the conversion server.</div>
+      <a id="download" class="download hidden" download="nerizps-audio.mp3"><span>↓</span> Download MP3</a>
+    </div>
+    <aside class="side-note"><div class="note-icon">✦</div><h3>Made for the moments you want to keep.</h3><p>Convert audio into a format that plays almost everywhere. Simple controls, no clutter.</p><div class="note-line"></div><div class="note-stat"><b>4</b><span>quality presets</span></div><div class="note-stat"><b>MP3</b><span>ready-to-save output</span></div></aside>
+  </section>
+  <section class="benefits">
+    <div><span class="benefit-icon">⌁</span><b>Easy workflow</b><p>Upload a file or paste a direct audio URL.</p></div>
+    <div><span class="benefit-icon">◈</span><b>Choose your quality</b><p>Pick 128, 192, 256 or 320 kbps.</p></div>
+    <div><span class="benefit-icon">↧</span><b>Download and go</b><p>Save your converted MP3 in one click.</p></div>
+  </section>
+  <p class="disclaimer">Only convert audio you own or have permission to download and convert. This app does not extract audio from YouTube or bypass streaming-service restrictions.</p>
+</main>
+<footer class="wrap"><a class="brand footer-brand" href="/"><span class="logo">N</span><span>Nerizps <b>Audio</b></span></a><span>Built for your audio workflow · 2026</span></footer>
+<script src="/app.js"></script>
+</body></html>
